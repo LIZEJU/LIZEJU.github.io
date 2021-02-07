@@ -97,7 +97,140 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        
+        <p> 参考文档</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000023924668">https://segmentfault.com/a/1190000023924668</a></p>
+<p><a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-install-setup.html">https://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
+<p>ubuntu 安装nodejs, 源码包<br>tar -xvf node-v14.15.4-linux-x64.tar.xz </p>
+<p>mv node-v14.15.4-linux-x64 ~/Downloads/</p>
+<p>lizejun@ubuntu:~/Downloads/node-v14.15.4-linux-x64/bin$ sudo ln -s /home/lizejun/Downloads/node-v14.15.4-linux-x64/bin/node /usr/local/bin/node<br>[sudo] password for lizejun:</p>
+<p>lizejun@ubuntu:~/Downloads/node-v14.15.4-linux-x64/bin$ sudo ln -s /home/lizejun/Downloads/node-v14.15.4-linux-x64/bin/npm /usr/local/bin/npm</p>
+<p>lizejun@ubuntu:<del>$ npm -v<br>6.14.10<br>lizejun@ubuntu:</del>$ node -v<br>v14.15.4</p>
+<p>npm加速<br>一、修改成淘宝镜像源</p>
+<ol>
+<li>命令</li>
+</ol>
+<p>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<ol start="2">
+<li>验证命令</li>
+</ol>
+<p>npm config get registry</p>
+<p>如果返回<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org,说明镜像配置成功./">https://registry.npm.taobao.org，说明镜像配置成功。</a></p>
+<p>二、修改成华为云镜像源</p>
+<ol>
+<li>命令</li>
+</ol>
+<p>npm config set registry <a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/npm/">https://mirrors.huaweicloud.com/repository/npm/</a></p>
+<ol start="2">
+<li>验证命令</li>
+</ol>
+<p>npm config get registry</p>
+<p>如果返回<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/npm/%EF%BC%8C%E8%AF%B4%E6%98%8E%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F%E3%80%82">https://mirrors.huaweicloud.com/repository/npm/，说明镜像配置成功。</a></p>
+<p>三、通过使用淘宝cnpm安装</p>
+<ol>
+<li>安装cnpm</li>
+</ol>
+<p>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<ol start="2">
+<li>使用cnpm</li>
+</ol>
+<p>cnpm install xxx</p>
+<p>github 搭建博客<br>izejun@ubuntu:<del>$ git version<br>git version 2.17.1<br>lizejun@ubuntu:</del>$ node -v<br>v14.15.4<br>lizejun@ubuntu:~$ npm -v<br>6.14.10</p>
+<p>lizejun@ubuntu:<del>$ npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>lizejun@ubuntu:</del>$ npm config get registry<br><a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></p>
+<p>TypeError: Console expects a writable stream instance<br>升级nodejs</p>
+<p>wget <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/latest-v14.x/node-v14.1.0-linux-x64.tar.gz">https://npm.taobao.org/mirrors/node/latest-v14.x/node-v14.1.0-linux-x64.tar.gz</a></p>
+<p><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/v12.18.3/">https://npm.taobao.org/mirrors/node/v12.18.3/</a></p>
+<p>sudo ln -s /home/lizejun/npmtest/node-v14.1.0-linux-x64/bin/node /usr/local/bin/node<br>sudo  ln -s /home/lizejun/npmtest/node-v14.1.0-linux-x64/bin/npm /usr/local/bin/npm</p>
+<p>lizejun@ubuntu:~/npmtest/blog$ npm config get registry<br><a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/npm/">https://mirrors.huaweicloud.com/repository/npm/</a></p>
+<p>lizejun@ubuntu:~$ npm install -g hexo-cli</p>
+<p>cd blog </p>
+<p>hexo init 初始化</p>
+<p>hexo generate 创建文件</p>
+<p>hexo server -p 9999 启动本地服务</p>
+<p>访问：</p>
+<p>localhost:9999 </p>
+<p>hexo generate —&gt;  hexo g # 生成页面文件</p>
+<p>hexo server —&gt; hexo s # 启动服务预览</p>
+<p>hexo server -p 8080 # 指定端口运行</p>
+<p>hexo deploy —&gt; hexo d # 部署</p>
+<p>hexo clean # 清除缓存，若是网页正常情况下可以忽略这条命令</p>
+<p>npm使用国内镜像加速的几种方法</p>
+<p>2018-12-17</p>
+<p>阅读 9.4K0</p>
+<p>在使用npm过程中经常会遇到无法下载包的问题，本人在这里整理了几个npm使用国内镜像加速的方法，希望对大家有所帮助。</p>
+<p>一、修改成淘宝镜像源</p>
+<ol>
+<li>命令</li>
+</ol>
+<p>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<ol start="2">
+<li>验证命令</li>
+</ol>
+<p>npm config get registry</p>
+<p>如果返回<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org,说明镜像配置成功./">https://registry.npm.taobao.org，说明镜像配置成功。</a></p>
+<p>二、修改成华为云镜像源</p>
+<ol>
+<li>命令</li>
+</ol>
+<p>npm config set registry <a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/npm/">https://mirrors.huaweicloud.com/repository/npm/</a></p>
+<ol start="2">
+<li>验证命令</li>
+</ol>
+<p>npm config get registry</p>
+<p>如果返回<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/repository/npm/%EF%BC%8C%E8%AF%B4%E6%98%8E%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F%E3%80%82">https://mirrors.huaweicloud.com/repository/npm/，说明镜像配置成功。</a></p>
+<p>三、通过使用淘宝cnpm安装</p>
+<ol>
+<li>安装cnpm</li>
+</ol>
+<p>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<ol start="2">
+<li>使用cnpm</li>
+</ol>
+<p>cnpm install xxx</p>
+<p>使用github创建项目仓库</p>
+<p>注意： 仓库名必须是 <username>.github.io ，如果你的 github 名是 David，那么你的仓库名必须是 David.github.io 。</p>
+<p>LIZEJU.github.io</p>
+<p>配置ssh-keygen</p>
+<p>lizejun@ubuntu:<del>/npmtest/blog$ ssh-keygen -t rsa -C “<a href="mailto:&#109;&#x31;&#56;&#x36;&#x31;&#x31;&#x36;&#57;&#52;&#49;&#x38;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;">&#109;&#x31;&#56;&#x36;&#x31;&#x31;&#x36;&#57;&#52;&#49;&#x38;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;</a>“<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/home/lizejun/.ssh/id_rsa):<br>/home/lizejun/.ssh/id_rsa already exists.<br>Overwrite (y/n)? y<br>Enter passphrase (empty for no passphrase):<br>Enter same passphrase again:<br>Your identification has been saved in /home/lizejun/.ssh/id_rsa.<br>Your public key has been saved in /home/lizejun/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>SHA256:Qf9lWrG2/N9eQc1j6SYjzc+16lg6whJWz1zB4xVqv1E <a href="mailto:&#109;&#49;&#x38;&#x36;&#49;&#49;&#54;&#x39;&#x34;&#x31;&#x38;&#x39;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#109;&#49;&#x38;&#x36;&#49;&#49;&#54;&#x39;&#x34;&#x31;&#x38;&#x39;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a><br>The key’s randomart image is:<br>+—[RSA 2048]—-+<br>| . . …|<br>| . . +.=o|<br>| . . .oX=E|<br>| o .+X=.o|<br>| S +.+=o*.|<br>| o +. <em>.</em>|<br>| . o . =o|<br>| . o .+ . +|<br>| . .ooo .+|<br>+—-[SHA256]—–+<br>lizejun@ubuntu:</del>/npmtest/blog$ cat ~/.ssh/id_rsa.pub<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC08QuDRHwwEei4UCZKf7Mx/tu5y1ZREovqRNGlX59RXtMvmWt+dw1mhgp78T6tjLKomMIxxaSBpa2g/z5xk625Xs01PmtCEGcyZMMr9LIPL1mLIUQHlpXCrKbkemCnZc6vQQ4A4icu9/NyaInSeymJT7cFFHq+OE3ImQQl3BygAS1hvwnnO3aK0+UjQ75ayxJCKn/jiygCHEqiPI2Nxcb7ra0WKPgnA/DvaRxNeYZgovae5MPBr/p9sDjByqX7ZkUYaaFCEnt6atfkyhK5v5rAKRtR/aI4d/OHvFUWjDT1an8+Mbm7w5vBKkVorbuwfBw+JRYAyoSPCCFqj1KdprJB <a href="mailto:&#x6d;&#x31;&#x38;&#x36;&#x31;&#49;&#54;&#57;&#x34;&#49;&#x38;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;">&#x6d;&#x31;&#x38;&#x36;&#x31;&#49;&#54;&#57;&#x34;&#49;&#x38;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>vim _config.yml 配置本地文件</p>
+<p>deploy:<br>type: git<br>repo: <a target="_blank" rel="noopener" href="https://github.com/LIZEJU/LIZEJU.github.io.git">https://github.com/LIZEJU/LIZEJU.github.io.git</a><br>branch: master<br>– INSERT –</p>
+<p>安装部署插件</p>
+<p>sudo npm install -g hexo-deployer-git –save</p>
+<p>下载仓库</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/LIZEJU/LIZEJU.github.io.git">https://github.com/LIZEJU/LIZEJU.github.io.git</a></p>
+<p>izejun@ubuntu:<del>/npmtest/blog$ cp -r public/* LIZEJU.github.io/<br>lizejun@ubuntu:</del>/npmtest/blog$ ls LIZEJU.github.io/<br>2021 archives css fancybox index.html js README.md<br>lizejun@ubuntu:<del>/npmtest/blog$ cd LIZEJU.github.io/<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git add .<br>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git commit -m “1”<br>[main 866888d] 1<br>17 files changed, 5166 insertions(+)<br>create mode 100644 2021/02/07/hello-world/index.html<br>create mode 100644 archives/2021/02/index.html<br>create mode 100644 archives/2021/index.html<br>create mode 100644 archives/index.html<br>create mode 100644 css/fonts/FontAwesome.otf<br>create mode 100644 css/fonts/fontawesome-webfont.eot<br>create mode 100644 css/fonts/fontawesome-webfont.svg<br>create mode 100644 css/fonts/fontawesome-webfont.ttf<br>create mode 100644 css/fonts/fontawesome-webfont.woff<br>create mode 100644 css/fonts/fontawesome-webfont.woff2<br>create mode 100644 css/images/banner.jpg<br>create mode 100644 css/style.css<br>create mode 100644 fancybox/jquery.fancybox.min.css<br>create mode 100644 fancybox/jquery.fancybox.min.js<br>create mode 100644 index.html<br>create mode 100644 js/jquery-3.4.1.min.js<br>create mode 100644 js/script.js<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git push origin master<br>error: src refspec master does not match any.<br>error: failed to push some refs to ‘<a target="_blank" rel="noopener" href="https://github.com/LIZEJU/LIZEJU.github.io.git&#39;">https://github.com/LIZEJU/LIZEJU.github.io.git&#39;</a><br>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git push<br>Username for ‘<a target="_blank" rel="noopener" href="https://github.com&/#39;">https://github.com&#39;</a>: <a href="mailto:&#109;&#x31;&#x38;&#x36;&#49;&#49;&#x36;&#x39;&#52;&#49;&#x38;&#57;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#109;&#x31;&#x38;&#x36;&#49;&#49;&#x36;&#x39;&#52;&#49;&#x38;&#57;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a><br>Password for ‘<a target="_blank" rel="noopener" href="https://m18611694189%40163.com@github.com&/#39;">https://m18611694189@163.com@github.com&#39;</a>:<br>Counting objects: 31, done.<br>Compressing objects: 100% (25/25), done.<br>Writing objects: 100% (31/31), 882.21 KiB | 10.26 MiB/s, done.<br>Total 31 (delta 3), reused 0 (delta 0)<br>remote: Resolving deltas: 100% (3/3), done.<br>To <a target="_blank" rel="noopener" href="https://github.com/LIZEJU/LIZEJU.github.io.git">https://github.com/LIZEJU/LIZEJU.github.io.git</a><br>e277532..866888d main -&gt; main<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git config –global user.email “<a href="mailto:&#x6d;&#49;&#56;&#x36;&#x31;&#49;&#54;&#57;&#x34;&#49;&#x38;&#x39;&#64;&#49;&#x36;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x6d;&#49;&#56;&#x36;&#x31;&#49;&#54;&#57;&#x34;&#49;&#x38;&#x39;&#64;&#49;&#x36;&#51;&#46;&#x63;&#x6f;&#x6d;</a>“<br>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git config –global user.name “<a href="mailto:&#109;&#x31;&#x38;&#54;&#49;&#x31;&#x36;&#57;&#x34;&#x31;&#56;&#x39;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;">&#109;&#x31;&#x38;&#54;&#49;&#x31;&#x36;&#57;&#x34;&#x31;&#56;&#x39;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;</a>“<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git commit -m “2”<br>On branch main<br>Your branch is up to date with ‘origin/main’.</p>
+<p>nothing to commit, working tree clean<br>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git push<br>Username for ‘<a target="_blank" rel="noopener" href="https://github.com&/#39;">https://github.com&#39;</a>: <a href="mailto:&#109;&#49;&#56;&#x36;&#49;&#49;&#54;&#57;&#x34;&#49;&#56;&#x39;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#109;">&#109;&#49;&#56;&#x36;&#49;&#49;&#54;&#57;&#x34;&#49;&#56;&#x39;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#109;</a><br>Password for ‘<a target="_blank" rel="noopener" href="https://m18611694189%40163.com@github.com&/#39;">https://m18611694189@163.com@github.com&#39;</a>:<br>Everything up-to-date<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git push -u origin master<br>error: src refspec master does not match any.<br>error: failed to push some refs to ‘<a target="_blank" rel="noopener" href="https://github.com/LIZEJU/LIZEJU.github.io.git&#39;">https://github.com/LIZEJU/LIZEJU.github.io.git&#39;</a><br>lizejun@ubuntu:~/npmtest/blog/LIZEJU.github.io$</p>
+<p>github 修改其他分支为默认分支</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/c843ea0b57105f36921e4a3e.html">https://jingyan.baidu.com/article/c843ea0b57105f36921e4a3e.html</a></p>
+<p>在settings–branches中配置</p>
+<p>git 强制拉取代码到本地</p>
+<p>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git fetch –all<br>Fetching origin<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$ git reset –hard origin/master<br>HEAD is now at 0e4a1a2 Site updated: 2021-02-07 07:42:29<br>lizejun@ubuntu:<del>/npmtest/blog/LIZEJU.github.io$ git pull<br>Already up to date.<br>lizejun@ubuntu:</del>/npmtest/blog/LIZEJU.github.io$</p>
+<p>创建文章</p>
+<p>lizejun@ubuntu:<del>/npmtest/blog$ hexo new “linux1”<br>INFO Validating config<br>INFO Created: ~/npmtest/blog/source/_posts/linux1.md<br>lizejun@ubuntu:</del>/npmtest/blog$ hexo g -d 部署</p>
+<p>INFO Validating config</p>
+<p>设置主题</p>
+<p>$ git clone <a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
+<p> 主题：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p> <a target="_blank" rel="noopener" href="https://github.com/blleng/hexo-theme-lx">https://github.com/blleng/hexo-theme-lx</a></p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/blleng/hexo-theme-lx">https://github.com/blleng/hexo-theme-lx</a> themes/lx</p>
+<p>Edit _config.yml:</p>
+<p>theme: lx</p>
+<p>hexo g -d 部署，发布到github</p>
+<p>需要等待一段时间，页面才能访问到</p>
+<p>主题风格设置<br>menu_theme: black-grey<br>#menu_theme: greenish</p>
+<h1 id="menu-content"><a href="#menu-content" class="headerlink" title="menu content"></a>menu content</h1><p>menu:<br>category: false #category<br>pages: #the page created by yourself<br>enable: false<br>links:<br>Guestbook: guestbook/<br>About: about/<br>friends:<br>enable: true<br>links:<br>Theme-Lx: <a target="_blank" rel="noopener" href="https://www.cnblogs.com/lzjloveit/">https://www.cnblogs.com/lzjloveit/</a></p>
+<p>本地搜索</p>
+<p>At the blog root dir:</p>
+<p>$ npm install hexo-generator-searchdb -s</p>
+<p>Edit themes/lx/_config.yml:</p>
+<p>local_search:</p>
+<p>  enable: true</p>
+<p>修改头像</p>
+<p>avatar: <a target="_blank" rel="noopener" href="https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/forum/w=580/sign=2b2314d0251f95caa6f592bef9167fc5/25220ef41bd5ad6e61ed754481cb39dbb7fd3cc5.jpg">https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/forum/w=580/sign=2b2314d0251f95caa6f592bef9167fc5/25220ef41bd5ad6e61ed754481cb39dbb7fd3cc5.jpg</a></p>
+<p>修改文章</p>
+<p>hexo new “xxx” 修改的文章在source/_posts这个目录下面，修改这里的文档内容</p>
+<p>hexo -g d 发布到github上就可以了。</p>
+
       </div>
     </div>
   </div>
